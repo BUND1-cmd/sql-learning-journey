@@ -1,2 +1,2 @@
 # sql-learning-journey
-documenting each day SQL learning here ,simple and clear
+currently on joins i will update when done
