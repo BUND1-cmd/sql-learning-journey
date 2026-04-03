@@ -87,3 +87,8 @@ FROM customers;
     select vendor_name,amount,
 rank() over (order by amount desc) as rank 
 from invoices
+....common table expressions...
+    with finance_invoices as ( select vendor_name,amount,status,department from invoices
+where department="Finance")
+select * from finance_invoices
+where status = "Paid"
