@@ -76,12 +76,14 @@ GROUP BY city
 HAVING COUNT(*) > 2;
 
 
--- -------------------------
--- CASE WHEN
--- -------------------------
+-
 SELECT name,
 CASE
     WHEN age >= 30 THEN 'Older'
     ELSE 'Younger'
 END AS age_group
 FROM customers;
+....rank...
+    select vendor_name,amount,
+rank() over (order by amount desc) as rank 
+from invoices
